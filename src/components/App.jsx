@@ -14,7 +14,7 @@ export class App extends React.Component {
       { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
     ],
     name: '',
-    number: null,
+    number: "",
     filter: '',
   };
 
@@ -68,9 +68,8 @@ export class App extends React.Component {
 
         <>
           <h1 className={css.title}>Contacts</h1>
-          {this.state.contacts.length && (
-            <Filters handleFilterContact={this.handleFilterContact} />
-          )}
+          {this.state.contacts.length  ? <Filters handleFilterContact={this.handleFilterContact} />
+          : <h2>Создайте первый контакт</h2>}
         </>
         <Contacts
           contacts={this.state.contacts}

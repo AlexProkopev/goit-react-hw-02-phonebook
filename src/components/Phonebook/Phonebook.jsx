@@ -4,7 +4,7 @@ import css from "./PhoneBook.module.css"
 export default class Phonebook extends React.Component {
   state = {
     name: '',
-      number: 0,
+      number: "",
   };
 
   handleInputChange = e => {
@@ -27,7 +27,7 @@ export default class Phonebook extends React.Component {
 
     this.props.handleAddContact(contacts);
 
-    this.setState({ name: '', number: 0 });
+    this.setState({ name: '', number: "" });
   };
 
   render() {
