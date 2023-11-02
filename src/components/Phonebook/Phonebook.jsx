@@ -27,7 +27,7 @@ export default class Phonebook extends React.Component {
 
     this.props.handleAddContact(contacts);
 
-    e.currentTarget.reset();
+    this.setState({ name: '', number: 0 });
   };
 
   render() {
